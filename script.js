@@ -2,6 +2,9 @@ let nodea = document.querySelectorAll(".cot1");
 let itemsl = document.querySelectorAll(".item");
 let nodea2 = document.querySelectorAll(".cot2");
 let nodea3 = document.querySelectorAll(".cot3");
+let  popup=document.querySelector('.pop');
+let body=document.querySelector('body');
+let container=document.querySelector('container');
 const timeEnd = 8000;
 const numberLoop = 3;
 const vMacDinh1 = 200;
@@ -224,15 +227,30 @@ document.getElementById("bt1").addEventListener("click", function (e) {
       var b = nodea2[j].getBoundingClientRect().top;
       var c = nodea3[j].getBoundingClientRect().top;
 
-      if (aPhanTuThu2 == a) {
+      if (aPhanTuThu2+ 100> a&&aPhanTuThu2-100<a) {
         console.log(nodea[j-1]);
+        var so1=nodea[j-1].innerHTML;
       }
-      if (aPhanTuThu2 == b) {
+      if (aPhanTuThu2+ 100> b&&aPhanTuThu2-100<b) {
         console.log(nodea2[j-1]);
+        var so2=nodea2[j-1].innerHTML;
       }
-      if (aPhanTuThu2 == c) {
+      if (aPhanTuThu2+ 100> c&&aPhanTuThu2-100<c) {
         console.log(nodea3[j-1]);
+        var so3=nodea3[j-1].innerHTML;
       }
     }
+    popup.innerHTML=`🎉🎉🎉Xin chúc mùng số trúng thưởng là
+    ${so1}${so2}${so3}`
+    
+    popup.classList.remove('tat');
+    container.style.opacity='0.5';
+    popup.style.opacity='1';
+
+
   }, 6000);
 });
+
+body.addEventListener("click",()=>{
+  popup.classList.add('tat')
+})
