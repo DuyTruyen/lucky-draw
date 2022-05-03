@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+
+        }
+
+        #container {
+            width: max-content;
+            margin: 100px auto;
+
+        }
+
+        .xoso {
+
+            display: flex;
+            /* border: 2px solid rgb(255, 68, 0); */;
+            border: 3px solid red;
+            border-radius: 10px;
+            height: 250px;
+            overflow: hidden;
+            box-shadow: rgb(75, 71, 71) 1px 3px;
+            /* position: relative;
+        top: 100px;
+        width: 300px; */
+        }
+
+        /* .item-group-1{
+        margin: 3px;
+
+    } */
+        .item {
+            -webkit-text-stroke: 1px white;
+            /* border-radius: 50%; */
+            width: 250px;
+            height: 250px;
+            text-align: center;
+            line-height: 250px;
+            transition: transform 0.15s;
+            color: red;
+            font-style: italic;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 80px;
+            
+
+
+        }
+        .item-group-2,
+        .item-group-3{
+            border-left: 1px solid black;
+        }
+        .item-group-1,
+        .item-group-2,
+        .item-group-3 {
+            position: relative;
+            top: -250px;
+            /*  */
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 80px;
+            color: yellow;
+            text-align: center;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+            }
+
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+            }
+        }
+
+        body {
+            background: linear-gradient(#3d171f, #88233a);
+            /* background-repeat: no-repeat; */
+            min-height: 100%;
+
+        }
+
+        html {
+            height: 100%;
+        }
+
+        button {
+            padding: 1.4em 3em;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 500;
+            color: #000;
+            background-color: #fff;
+            border: none;
+            border-radius: 45px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: #2EE59D;
+            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            color: #fff;
+            transform: translateY(-7px);
+        }
+
+        button:active {
+            transform: translateY(-1px);
+        }
+
+        /* From uiverse.io by @ercnersoy */
+        input {
+            border: none;
+            padding: 1rem;
+            border-radius: 1rem;
+            background: #e8e8e8;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            outline-color: #e8e8e8;
+            background: #e8e8e8;
+            box-shadow: inset 20px 20px 60px #c5c5c5,
+                inset -20px -20px 60px #ffffff;
+            transition: 0.3s;
+        }
+        #sp2{
+            position: relative;
+            left: 60%;
+        }
+        #sp1{
+            position: relative;
+            left: 10%;
+        }
+        .pop{
+            position: relative;
+            width: 500px;
+            height: 300px;
+            top: -500px;
+            margin: auto;
+            border: 1px solid yellow;
+            background-color: #fff;
+        }
+        .tat{
+            transform: scale(0);
+        }
+        .bat{
+            transform: scale(1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>LUCKY DRAW</h1>
+    <div id="container">
+        <div class="xoso">
+
+
+            <div class="item-group-1">
+                <div class="item0 item cot1">0</div>
+                <div class="item1 item cot1" style="opacity: 1;background-color: chartreuse;">1</div>
+                <div class="item2 item cot1">2</div>
+                <div class="item3 item cot1">3</div>
+                <div class="item4 item cot1">4</div>
+                <div class="item5 item cot1">5</div>
+                <div class="item6 item cot1">6</div>
+                <div class="item7 item cot1">7</div>
+                <div class="item8 item cot1">8</div>
+                <div class="item9 item cot1">9</div>
+            </div>
+
+            <div class="item-group-2">
+                <div class="item0 item cot2">0</div>
+                <div class="item1 item cot2" style="opacity: 1;background-color: chartreuse;">1</div>
+                <div class="item2 item cot2">2</div>
+                <div class="item3 item cot2">3</div>
+                <div class="item4 item cot2">4</div>
+                <div class="item5 item cot2">5</div>
+                <div class="item6 item cot2">6</div>
+                <div class="item7 item cot2">7</div>
+                <div class="item8 item cot2">8</div>
+                <div class="item9 item cot2">9</div>
+            </div>
+            <div class="item-group-3">
+                <div class="item0 item cot3">0</div>
+                <div class="item1 item cot3" style="opacity: 1;background-color: chartreuse;">1</div>
+                <div class="item2 item cot3">2</div>
+                <div class="item3 item cot3">3</div>
+                <div class="item4 item cot3">4</div>
+                <div class="item5 item cot3">5</div>
+                <div class="item6 item cot3">6</div>
+                <div class="item7 item cot3">7</div>
+                <div class="item8 item cot3">8</div>
+                <div class="item9 item cot3">9</div>
+            </div>
+
+
+        </div>
+    </div>
+    <span id="sp1">
+         <button id="bt1">Stop</button>
+    <button id="bt2">Start</button>
+    </span>
+   
+    <span id="sp2">
+        
+        <button id="bt3">Cheat</button>
+        <input type="number" min="0" max="999" id="so"></span>
+    <div class="pop tat">So trung thuong</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
